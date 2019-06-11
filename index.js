@@ -17,7 +17,6 @@ function showTime() {
   minute.innerHTML = addZero(min);
   second.innerHTML = addZero(sec);
 
-  setTimeout(showTime(), 1000);
 }
 
 //if value of hour, minute, and seconds are below 10, add a zero in front, otherwise, do nothing
@@ -49,4 +48,4 @@ function greeting() {
 
 //call functions
 greeting();
-showTime()
+setInterval(showTime, 1000);
