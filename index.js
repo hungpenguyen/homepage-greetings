@@ -16,10 +16,12 @@ function showTime() {
   hour.innerHTML = addZero(hr);
   minute.innerHTML = addZero(min);
   second.innerHTML = addZero(sec);
+
+  setTimeout(showTime(), 1000);
 }
 
-//create a time out function so that the time updates every minute; which is 60000ms
-setTimeout(showTime(), 1000);
+
+
 
 //if value of hour, minute, and seconds are below 10, add a zero in front, otherwise, do nothing
 function addZero(n) {
@@ -50,3 +52,4 @@ function greeting() {
 
 //call functions
 greeting();
+showTime()
