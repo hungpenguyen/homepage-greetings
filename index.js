@@ -20,9 +20,6 @@ function showTime() {
   setTimeout(showTime(), 1000);
 }
 
-
-
-
 //if value of hour, minute, and seconds are below 10, add a zero in front, otherwise, do nothing
 function addZero(n) {
   if (n < 10) {
