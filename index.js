@@ -47,6 +47,15 @@ function greeting() {
   }
 }
 
+//if click on enter name or enter goal, the textContent disappears
+function clearNameText() {
+  name.textContent = '';
+}
+
+function clearGoalText() {
+  goal.textContent = '';
+}
+
 //grab and set the name inputed in the span with the ID name.
 function setName(e) {
   if (e.type === 'keypress') {
@@ -74,8 +83,10 @@ function setGoal(e) {
 
 name.addEventListener('keypress', setName);
 name.addEventListener('blur', setName);
+name.addEventListener('click', clearNameText);
 goal.addEventListener('keypress', setGoal);
 goal.addEventListener('blur', setGoal);
+goal.addEventListener('click', clearGoalText);
 //call functions
 greeting();
 setInterval(showTime, 1000);
