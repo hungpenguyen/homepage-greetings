@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body{
   height: 100vh;
   font-family: 'Roboto Mono', monospace;
@@ -19,10 +23,12 @@ body{
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 20%;
 }
 
 .time h1 {
   font-size: 8rem;
+  margin-bottom: 10px;
 }
 
 .time h2 {
@@ -31,17 +37,9 @@ body{
 
 .time h4 {
   font-size: 2rem;
+  margin-top: 50px;
 }
 
-/* goal of the day */
-.todo input {
-  background-color: transparent;
-  border: 0;
-  outline: 0;
-  height: 3rem;
-  font-size: 3rem;
-  border-bottom: 2px solid white;
-}
 
 /* change the color of placeholder and inputted text to white*/
 ::placeholder {
@@ -54,7 +52,10 @@ textarea:focus, input:focus {
 }
 
 @media (max-width: 800px) {
+  .time {
+    margin-top: 40%;
+  }
   .time h1 {
-    font-size: 5.7rem;
+    font-size: 6rem;
   }
 }

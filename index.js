@@ -3,6 +3,7 @@ const minute = document.querySelector('#minute');
 const second = document.querySelector('#second');
 const name = document.querySelector('#name');
 const typeOfGreet = document.querySelector('#time-of-day');
+const goal = document.querySelector('#goal');
 
 
 //display time
@@ -46,6 +47,37 @@ function greeting() {
   }
 }
 
+//grab and set the name inputed in the span with the ID name.
+function setName(e) {
+  if (e.type === 'keypress') {
+    // Make sure enter is pressed
+    if (e.which == 13 || e.keyCode == 13) {
+      localStorage.setItem('name', e.target.innerText);
+      name.blur();
+    }
+  } else {
+    localStorage.setItem('name', e.target.innerText);
+  }
+}
+
+function setGoal(e) {
+  if (e.type === 'keypress') {
+    // Make sure enter is pressed
+    if (e.which == 13 || e.keyCode == 13) {
+      localStorage.setItem('goal', e.target.innerText);
+      goal.blur();
+    }
+  } else {
+    localStorage.setItem('goal', e.target.innerText);
+  }
+}
+
+name.addEventListener('keypress', setName);
+name.addEventListener('blur', setName);
+goal.addEventListener('keypress', setGoal);
+goal.addEventListener('blur', setGoal);
 //call functions
 greeting();
 setInterval(showTime, 1000);
+setName();
+setGoal();
