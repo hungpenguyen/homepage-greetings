@@ -1,4 +1,5 @@
 DEMO: https://hungpenguyen.github.io/homepage-greetings/
+
 This is only meant to be viewed on larger screen size but media query was used to accomodate for smaller screen size. 
 Not a project for mobile, therefore, the font size for the time is a bit too big to be viewed on mobile.
 
